@@ -1,0 +1,61 @@
+/* For reference, see https://aka.ms/devcontainer.json */
+{
+    "name": "DeepLab3+",
+    /* Configure tool-specific properties. */
+    "customizations": {
+        "vscode": {
+            "extensions": [
+                "ms-vscode.cpptools-extension-pack",
+                "jeff-hykin.better-cpp-syntax",
+                "ms-python.black-formatter",
+                "oderwat.indent-rainbow",
+                "donjayamanne.git-extension-pack",
+                "mhutchie.git-graph",
+                "waderyan.gitblame",
+                "bierner.markdown-preview-github-styles",
+                "streetsidesoftware.code-spell-checker",
+                "cschlosser.doxdocgen",
+                "njpwerner.autodocstring",
+                "dotjoshjohnson.xml",
+                "tomoki1207.pdf",
+                "wayou.vscode-todo-highlight",
+                "cweijan.vscode-office",
+                "ms-toolsai.jupyter",
+                "javascript.python-extensions-pack"
+            ]
+        }
+    },
+    /* Dockerfile settings */
+    "build": {
+        "dockerfile": "Dockerfile"
+    },
+    /* Docker run arguments */
+    "runArgs": [
+        "-it",
+        "--network=host",
+        "--ipc=host",
+        "--gpus",
+        "all"
+    ],
+    /* Privileged mode */
+    "privileged": true,
+    /* Container environment variables */
+    "containerEnv": {
+        "DISPLAY": "${localEnv:DISPLAY}"
+    },
+    /* Docker mounts */
+    "mounts": [
+        {
+            // X11 server.
+            "source": "/tmp/.X11-unix",
+            "target": "/tmp/.X11-unix",
+            "type": "bind"
+        }
+    ],
+    /* workspace settings */
+    "workspaceFolder": "/home/user/Lab6",
+    "workspaceMount": "source=${localWorkspaceFolder},target=${containerWorkspaceFolder},type=bind",
+    /* Lifecycle scripts */
+    "postCreateCommand": "${containerWorkspaceFolder}/.devcontainer/postCreateCommand.sh",
+    "postStartCommand": "uname -a"
+}

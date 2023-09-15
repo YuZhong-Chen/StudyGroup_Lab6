@@ -1,11 +1,12 @@
 __pycache__
 VOCdevkit
 checkpoints
-.vscode
 *.pyc
 .idea/
-__pycache__
 results
 checkpoints_bak
 cityscapes
+weights
+datasets
 test_results
+test_inputs

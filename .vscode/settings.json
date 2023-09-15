@@ -1,0 +1,24 @@
+{
+    "black-formatter.args": [
+        "--line-length",
+        "300"
+    ],
+    "cSpell.words": [
+        "argparser",
+        "aspp",
+        "astype",
+        "cityscapes",
+        "Deeplab",
+        "deeplabv",
+        "denorm",
+        "denormalization",
+        "Denormalize",
+        "idxs",
+        "itrs",
+        "mobilenet",
+        "preds",
+        "Visdom",
+        "xaxis",
+        "yaxis"
+    ]
+}
