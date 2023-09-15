@@ -16,7 +16,9 @@
         "idxs",
         "itrs",
         "mobilenet",
+        "NCHW",
         "preds",
+        "unsqueeze",
         "Visdom",
         "xaxis",
         "yaxis"
