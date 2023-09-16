@@ -2,7 +2,6 @@
 # Base Image : nvcr.io/nvidia/pytorch:21.08-py3 ( Ubuntu 22.04 )
 ##############################################################################
 
-# FROM nvcr.io/nvidia/pytorch:21.08-py3
 FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
 
 ##############################################################################
@@ -10,7 +9,7 @@ FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
 ##############################################################################
 
 LABEL org.opencontainers.image.authors="yuzhong1214@gmail.com"
-LABEL description="This image is for YOLOv7."
+LABEL description="This image is for Deeplab v3+."
 
 ##############################################################################
 # Arguments
