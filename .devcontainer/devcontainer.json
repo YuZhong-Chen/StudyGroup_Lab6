@@ -50,6 +50,12 @@
             "source": "/tmp/.X11-unix",
             "target": "/tmp/.X11-unix",
             "type": "bind"
+        },
+        {
+            // Pytorch cache
+            "source": "${localWorkspaceFolder}/.devcontainer/.cache",
+            "target": "/home/user/.cache",
+            "type": "bind"
         }
     ],
     /* workspace settings */
