@@ -16,6 +16,7 @@
         "Denormalize",
         "fourcc",
         "idxs",
+        "imread",
         "itrs",
         "MJPG",
         "mobilenet",
