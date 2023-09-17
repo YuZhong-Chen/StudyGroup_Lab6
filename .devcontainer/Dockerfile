@@ -1,8 +1,9 @@
 ##############################################################################
-# Base Image : nvcr.io/nvidia/pytorch:21.08-py3 ( Ubuntu 22.04 )
+# Base Image : nvcr.io/nvidia/pytorch:23.08-py3( Ubuntu 22.04 )
 ##############################################################################
 
-FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
+FROM nvcr.io/nvidia/pytorch:23.08-py3
+# FROM pytorch/pytorch:2.0.1-cuda11.7-cudnn8-devel
 
 ##############################################################################
 # Label
@@ -28,7 +29,7 @@ ENV SHELL=/bin/bash
 ENV TERM=xterm-256color
 ENV LANG=en_US.UTF-8
 ENV DEBIAN_FRONTEND=noninteractive
-ENV PATH=${PATH}:~/.local/bin
+ENV PATH=${PATH}:/home/user/.local/bin
 
 ##############################################################################
 # Set shell
@@ -59,7 +60,8 @@ RUN apt update && apt upgrade -y && apt install -y \
 
 RUN pip install \
     ipykernel \
-    ipython
+    ipython \
+    ipywidgets
 
 ##############################################################################
 # Set locale
